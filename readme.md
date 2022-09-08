@@ -1,3 +1,3 @@
 ## Kwetter school project
 
-__ a twitter ripoff __
+_a twitter ripoff_
