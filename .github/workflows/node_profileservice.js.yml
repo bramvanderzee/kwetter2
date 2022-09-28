@@ -1,12 +1,16 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: CI profileservice
 
 on:
   push:
   pull_request:
     branches: [ "main" ]
+
+defaults:
+  run:
+    working-directory: profileservice
 
 jobs:
   build:
@@ -17,7 +21,6 @@ jobs:
     - uses: actions/checkout@v3
     - name: Use Node.js 16.x
       uses: actions/setup-node@v3
-      working-directory: ./profileservice
       with:
         node-version: 16.x
         cache: 'npm'
