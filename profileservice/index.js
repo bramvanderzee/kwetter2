@@ -2,17 +2,19 @@ const express = require('express')
 const app = express();
 const port = 3000
 
+module.exports = app
+
 const sqlite3 = require('sqlite3').verbose()
 const db = new sqlite3.Database(':memory')
 
 db.serialize(() => {
     db.run('CREATE TABLE profile (info TEXT)')
-    const stmt = db.prepare('INSERT INTO profile VALUES (?)')
+    const statement = db.prepare('INSERT INTO profile VALUES (?)')
     for (let i = 0; i < 10; i++) {
-        stmt.run(`Ipsum ${i}`)
+        statement.run(`Ipsum ${i}`)
     }
 
-    stmt.finalize()
+    statement.finalize()
 
     db.each('SELECT rowid AS id, info FROM profile', (err, row) => {
         console.log(`${row.id}: ${row.info}`)

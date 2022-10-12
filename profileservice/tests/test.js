@@ -5,6 +5,6 @@ const requestWithSupertest = supertest(server);
 describe('State endpoint', () => {
     it('GET /state should ...', async () => {
         const res = await requestWithSupertest.get('/state');
-            expect(res.status).toEqual(200);
+        expect(res.status).toEqual(200);
     });
 });
