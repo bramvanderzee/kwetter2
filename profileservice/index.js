@@ -15,10 +15,6 @@ db.serialize(() => {
     }
 
     statement.finalize()
-
-    db.each('SELECT rowid AS id, info FROM profile', (err, row) => {
-        console.log(`${row.id}: ${row.info}`)
-    })
 })
 
 const state = function(req, res, next) {
