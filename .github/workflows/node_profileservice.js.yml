@@ -28,8 +28,14 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+
+  sonar:
+    name: Sonar
+    runs-on: ubuntu-latest
+    steps:
+    - run: npm test
       continue-on-error: true
-  
+      
     - name: Sonarcloud
       uses: actions/checkout@v2
       with:
