@@ -8,6 +8,7 @@ router.get('/profiles', async (req, res) => {
 })
 
 router.post('/profiles', async (req, res) => {
+    console.log(req.body)
     const profile = new Profile({
         title: req.body.title,
         content: req.body.content,

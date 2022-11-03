@@ -20,17 +20,17 @@ spec:
           ports:
           - containerPort: 3000
           env:
-          - name: mongo-url
+          - name: MONGO_URL
             valueFrom:
               configMapKeyRef:
                 name: mongo-config
                 key: mongo-url
-          - name: mongo-user
+          - name: MONGO_USER
             valueFrom:
               secretKeyRef:
                 name: mongo-secret
                 key: mongo-user
-          - name: mongo-pass
+          - name: MONGO_PASS
             valueFrom:
               secretKeyRef:
                 name: mongo-secret
