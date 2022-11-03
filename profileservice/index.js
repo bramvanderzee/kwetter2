@@ -4,7 +4,7 @@ const createServer = require('./server')
 const routes = require('./routes')
 const port = 3000
 
-mongoose.connect('mongodb://localhost:27017/acmedb',
+mongoose.connect('mongodb://mongodb:27017/acmedb',
     {
         authSource: "admin",
         user: "root",
