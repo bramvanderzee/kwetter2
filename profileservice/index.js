@@ -3,12 +3,15 @@ const mongoose = require('mongoose')
 const createServer = require('./server')
 const routes = require('./routes')
 const port = 3000
+const mongo_url = process.env.mongo-url 
+const mongo_user = process.env.mongo-user
+const mongo_pass = process.env.mongo-pass 
 
-mongoose.connect('mongodb://mongodb:27017/acmedb',
+mongoose.connect(mongo_url,
     {
         authSource: "admin",
-        user: "root",
-        pass: "root",
+        user: mongo_user,
+        pass: mongo_pass,
         useNewUrlParser: true
     })
         .then(() => {
