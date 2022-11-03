@@ -3,9 +3,9 @@ const mongoose = require('mongoose')
 const createServer = require('./server')
 const routes = require('./routes')
 const port = 3000
-const mongo_url = process.env.mongo-url 
-const mongo_user = process.env.mongo-user
-const mongo_pass = process.env.mongo-pass 
+const MONGO_URL = process.env.mongo-url
+const MONGO_USER = process.env.mongo-user
+const MONGO_PASS = process.env.mongo-pass 
 
 mongoose.connect(mongo_url,
     {
