@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: mongo-config
 data:
-  mongo-url: 'mongodb://mongo-service:27017'
+  mongo-url: 'mongodb+srv://bramvanderzee:<password>@cluster0.pbn1kfv.mongodb.net/?retryWrites=true&w=majority'
