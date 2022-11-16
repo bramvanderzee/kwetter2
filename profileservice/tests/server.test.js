@@ -2,14 +2,17 @@ const mongoose = require('mongoose')
 const supertest = require('supertest')
 const createServer = require('../server')
 const Profile = require('../models/profile')
+const mongo_url = process.env.MONGO_URL
+const mongo_user = process.env.MONGO_USER
+const mongo_pass = process.env.MONGO_PASS
 
 beforeEach((done) => {
     mongoose.connect(
-        "mongodb://localhost:27017/acmedb",
+        mongo_url,
         { 
             authSource: "admin",
-            user: "root",
-            pass: "root",
+            user: mongo_user,
+            pass: mongo_pass,
             useNewUrlParser: true 
         },
         () => done()

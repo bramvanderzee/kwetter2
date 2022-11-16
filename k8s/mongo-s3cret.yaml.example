@@ -4,5 +4,5 @@ metadata:
   name: mongo-secret
 type: Opaque
 stringData: 
-  mongo-user: root
-  mongo-pass: root
+  mongo-user: test-user
+  mongo-pass: <password>
