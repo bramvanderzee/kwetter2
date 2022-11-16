@@ -47,7 +47,7 @@ jobs:
     - run: npm ci
     - run: npm test      
       continue-on-error: true
-    - run: ls -R .
+    - run: cat coverage/lcov.info
     - run: sed -i 's@'$GITHUB_WORKSPACE'@/github/workspace/@g' coverage/lcov.info
       
     - name: Sonarcloud
