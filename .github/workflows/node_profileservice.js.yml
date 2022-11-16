@@ -46,6 +46,7 @@ jobs:
         cache-dependency-path: './profileservice/package-lock.json'
     - run: npm ci
     - run: npm test
+    - run: sed -i 's@'$GITHUB_WORKSPACE'@/github/workspace/@g' lcov.info
       continue-on-error: true
       
     - name: Sonarcloud
