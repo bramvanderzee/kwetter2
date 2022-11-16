@@ -1,30 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/bram/repos/kwetter2/profileservice/tests/server.test.js">
-    <testCase name="GET /profiles" duration="5004">
-      <failure message="Error: thrown: &quot;Exceeded timeout of 5000 ms for a test."><![CDATA[Error: thrown: "Exceeded timeout of 5000 ms for a test.
-Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
-    at Object.test (/home/bram/repos/kwetter2/profileservice/tests/server.test.js:30:1)
-    at Runtime._execModule (/home/bram/repos/kwetter2/profileservice/node_modules/jest-runtime/build/index.js:1596:24)
-    at Runtime._loadModule (/home/bram/repos/kwetter2/profileservice/node_modules/jest-runtime/build/index.js:1124:12)
-    at Runtime.requireModule (/home/bram/repos/kwetter2/profileservice/node_modules/jest-runtime/build/index.js:960:12)
-    at jestAdapter (/home/bram/repos/kwetter2/profileservice/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:89:13)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at runTestInternal (/home/bram/repos/kwetter2/profileservice/node_modules/jest-runner/build/runTest.js:407:16)
-    at runTest (/home/bram/repos/kwetter2/profileservice/node_modules/jest-runner/build/runTest.js:491:34)]]></failure>
-      <failure message="TypeError: Cannot read properties of undefined (reading &apos;dropDatabase&apos;)"><![CDATA[TypeError: Cannot read properties of undefined (reading 'dropDatabase')
-    at Object.dropDatabase (/home/bram/repos/kwetter2/profileservice/tests/server.test.js:23:28)
-    at Promise.then.completed (/home/bram/repos/kwetter2/profileservice/node_modules/jest-circus/build/utils.js:323:26)
-    at new Promise (<anonymous>)
-    at callAsyncCircusFn (/home/bram/repos/kwetter2/profileservice/node_modules/jest-circus/build/utils.js:259:10)
-    at _callCircusHook (/home/bram/repos/kwetter2/profileservice/node_modules/jest-circus/build/run.js:240:40)
-    at _runTest (/home/bram/repos/kwetter2/profileservice/node_modules/jest-circus/build/run.js:212:5)
-    at _runTestsForDescribeBlock (/home/bram/repos/kwetter2/profileservice/node_modules/jest-circus/build/run.js:97:9)
-    at run (/home/bram/repos/kwetter2/profileservice/node_modules/jest-circus/build/run.js:31:3)
-    at runAndTransformResultsToJestFormat (/home/bram/repos/kwetter2/profileservice/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:136:21)
-    at jestAdapter (/home/bram/repos/kwetter2/profileservice/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:92:19)
-    at runTestInternal (/home/bram/repos/kwetter2/profileservice/node_modules/jest-runner/build/runTest.js:407:16)
-    at runTest (/home/bram/repos/kwetter2/profileservice/node_modules/jest-runner/build/runTest.js:491:34)]]></failure>
-    </testCase>
   </file>
 </testExecutions>
