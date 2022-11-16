@@ -25,7 +25,7 @@ const mongo_pass = process.env.MONGO_PASS
 //    })
 //})
 
-const app = createServer()
+//const app = createServer()
 
 test('GET /profiles', async () => {
     expect(0).toBe(0)
