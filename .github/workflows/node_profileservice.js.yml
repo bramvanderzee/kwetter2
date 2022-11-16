@@ -5,8 +5,9 @@ name: CI profileservice
 
 on:
   push:
-  pull_request:
     branches: [ "main" ]
+  pull_request:
+      types: [opened, synchronize, reopened]
 
 env:
   MONGO_USER: ${{ secrets.MONGO_DB_USER }}
@@ -41,7 +42,7 @@ jobs:
       with:
         fetch-depth: 0
     - name: Get master
-      run: git fetch origin master
+      run: git fetch origin main
     - name: Install dependencies
       run:  npm install
     - name: Install Jest globally
