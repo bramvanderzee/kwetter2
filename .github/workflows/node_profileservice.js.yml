@@ -9,7 +9,7 @@ on:
     branches: [ "main" ]
 
 env:
-  MONGO_USER: test-user
+  MONGO_USER: ${{ secrets.MONGO_DB_USER }}
   MONGO_PASS: ${{ secrets.MONGO_DB_PASSWORD }}
   MONGO_URL: ${{ secrets.MONGO_DB_URL }}
 
