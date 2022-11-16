@@ -25,6 +25,10 @@ jobs:
         node-version: 16.x
         cache: 'npm'
         cache-dependency-path: './profileservice/package-lock.json'
+      env:
+        mongo-user: test-user
+        mongo-pass: ${{ MONGO_DB_PASSWORD }}
+        mongo-url: ${{ MONGO_DB_URL }}
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
