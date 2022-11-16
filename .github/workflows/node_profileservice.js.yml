@@ -47,9 +47,9 @@ jobs:
       run:  npm install
     - name: Install Jest globally
       run:  sudo npm install -g jest
-      continue-on-error: true
     - name: Run Tests
       run:  npm run test
+      continue-on-error: true
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
       env:
