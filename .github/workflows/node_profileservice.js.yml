@@ -47,8 +47,8 @@ jobs:
     - run: npm ci
     - run: npm test      
       continue-on-error: true
-    - run: sed -i 's@'$GITHUB_WORKSPACE'@/github/workspace/@g' profileservice/coverage/lcov.info
     - run: ls -R .
+    - run: sed -i 's@'$GITHUB_WORKSPACE'@/github/workspace/@g' profileservice/coverage/lcov.info
       
     - name: Sonarcloud
       uses: actions/checkout@v2
