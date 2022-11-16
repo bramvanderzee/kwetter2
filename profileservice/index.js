@@ -7,8 +7,6 @@ const MONGO_URL = process.env.MONGO_URL
 const MONGO_USER = process.env.MONGO_USER
 const MONGO_PASS = process.env.MONGO_PASS
 
-export default MONGO_USER
-
 mongoose.connect(MONGO_URL,
     {
         authSource: "admin",

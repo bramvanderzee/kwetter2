@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/bram/repos/kwetter2/profileservice/tests/server.test.js">
-    <testCase name="GET /profiles" duration="3"/>
+    <testCase name="GET /profiles" duration="2"/>
   </file>
   <file path="/home/bram/repos/kwetter2/profileservice/tests/index.test.js">
   </file>
