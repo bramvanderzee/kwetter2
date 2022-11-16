@@ -7,6 +7,7 @@ const mongo_user = process.env.MONGO_USER
 const mongo_pass = process.env.MONGO_PASS
 
 beforeEach((done) => {
+    console.log(mongo_url)
     mongoose.connect(
         mongo_url,
         { 
