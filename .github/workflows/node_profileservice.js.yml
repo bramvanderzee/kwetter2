@@ -14,6 +14,10 @@ env:
   MONGO_PASS: ${{ secrets.MONGO_DB_PASSWORD }}
   MONGO_URL: ${{ secrets.MONGO_DB_URL }}
 
+defaults:
+  run:
+    working-directory: profileservice
+
 jobs:
   build:
     name: CI and test
