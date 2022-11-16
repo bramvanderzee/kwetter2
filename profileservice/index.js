@@ -4,10 +4,8 @@ const createServer = require('./server')
 const routes = require('./routes')
 const port = 3000
 const MONGO_URL = process.env.MONGO_URL
-const MONGO_USER = process.env.MONGO_USER
+export const MONGO_USER = process.env.MONGO_USER
 const MONGO_PASS = process.env.MONGO_PASS
-
-module.export = MONGO_USER
 
 mongoose.connect(MONGO_URL,
     {
