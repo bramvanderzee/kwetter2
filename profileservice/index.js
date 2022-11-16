@@ -7,11 +7,11 @@ const MONGO_URL = process.env.MONGO_URL
 const MONGO_USER = process.env.MONGO_USER
 const MONGO_PASS = process.env.MONGO_PASS
 
-mongoose.connect(mongo_url,
+mongoose.connect(MONGO_URL,
     {
         authSource: "admin",
-        user: mongo_user,
-        pass: mongo_pass,
+        user: MONGO_USER,
+        pass: MONGO_PASS,
         useNewUrlParser: true
     })
         .then(() => {
