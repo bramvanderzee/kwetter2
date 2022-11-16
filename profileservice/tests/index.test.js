@@ -1,4 +1,4 @@
-import MONGO_USER from '../index.js'
+const MONGO_USER = require('../index')
 const supertest = require('supertest')
 
 test('has mongo username', () => {
