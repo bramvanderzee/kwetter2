@@ -45,6 +45,7 @@ jobs:
         node-version: 16.x
         cache: 'npm'
         cache-dependency-path: './profileservice/package-lock.json'
+    - run: ls -R coverage
     - run: npm ci
     - run: npm test      
       continue-on-error: true
