@@ -1,23 +1,23 @@
 const ROUTES = [
     {
-        url: '/free',
+        url: '/api/kweet',
         auth: false,
         proxy: {
-            target: 'http://www.google.com',
+            target: 'https://l3o7lqzt0a.execute-api.eu-west-1.amazonaws.com/kweet',
             changeOrigin: true,
             pathRewrite: {
-                [`^/free`]: ''
+                [`^/api/kweet`]: ''
             }
         }
     },
     {
-        url: '/premium',
-        auth: true,
+        url: '/api/profiles',
+        auth: false,
         proxy: {
-            target: 'http://www.google.com',
+            target: 'http://profile-service/api/profiles',
             changeOrigin: true,
             pathRewrite: {
-                [`^/premium`]: ''
+                [`^/api/profiles`]: ''
             }
         }
     }
