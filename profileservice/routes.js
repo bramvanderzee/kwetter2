@@ -17,4 +17,14 @@ router.post('/profile', async (req, res) => {
     res.send(profile)
 })
 
+router.delete('/profile/:id', async (req, res) => {
+    Profile.remove({
+        _id: req.params.id
+    }, function (err, profile) {
+        if (err)
+            return console.error(err)
+        res.status(200).send()
+    })
+})
+
 module.exports = router
