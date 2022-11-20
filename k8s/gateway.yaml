@@ -31,7 +31,7 @@ metadata:
   name: gateway-service
 spec:
   selector:
-    app: api
+    app: gateway-service
   ports:
     - protocol: TCP
       port: 3000

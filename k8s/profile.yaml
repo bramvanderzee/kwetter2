@@ -47,7 +47,7 @@ metadata:
   name: profile-service
 spec:
   selector:
-    app: api
+    app: profile-service
   ports:
     - protocol: TCP
       port: 3000
