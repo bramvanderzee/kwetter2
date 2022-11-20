@@ -2,12 +2,12 @@ const express = require('express')
 const router = express.Router()
 const Profile = require('./models/profile')
 
-router.get('/profiles', async (req, res) => {
+router.get('/profile', async (req, res) => {
     const profiles = await Profile.find()
     res.send(profiles)
 })
 
-router.post('/profiles', async (req, res) => {
+router.post('/profile', async (req, res) => {
     console.log(req.body)
     const profile = new Profile({
         title: req.body.title,

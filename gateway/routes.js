@@ -11,14 +11,11 @@ const ROUTES = [
         }
     },
     {
-        url: '/api/profiles',
+        url: '/api/profile',
         auth: false,
         proxy: {
-            target: 'http://profile-service/api/profiles',
+            target: 'http://profile-service/',
             changeOrigin: true,
-            pathRewrite: {
-                [`^/api/profiles`]: ''
-            }
         }
     }
 ]
