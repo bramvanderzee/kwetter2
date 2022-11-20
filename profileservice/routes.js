@@ -8,14 +8,13 @@ router.get('/profile', async (req, res) => {
 })
 
 router.post('/profile', async (req, res) => {
-    console.log(req.body)
     const profile = new Profile({
         title: req.body.title,
         content: req.body.content,
         userId: req.body.userId
     })
     await profile.save()
-    req.send(post)
+    res.send(profile)
 })
 
 module.exports = router
