@@ -5,9 +5,6 @@ const ROUTES = [
         proxy: {
             target: 'https://l3o7lqzt0a.execute-api.eu-west-1.amazonaws.com/kweet',
             changeOrigin: true,
-            pathRewrite: {
-                [`^/api/kweet`]: ''
-            }
         }
     },
     {
