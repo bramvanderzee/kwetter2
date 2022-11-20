@@ -14,7 +14,7 @@ const ROUTES = [
         url: '/api/profile',
         auth: false,
         proxy: {
-            target: 'http://profile-service/',
+            target: 'http://profile-service:3000/',
             changeOrigin: true,
         }
     }
