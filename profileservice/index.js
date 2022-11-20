@@ -9,6 +9,7 @@ const MONGO_PASS = process.env.MONGO_PASS
 
 module.export = MONGO_USER
 
+console.log("Mongo URL:", MONGO_URL)
 mongoose.connect(MONGO_URL,
     {
         authSource: "admin",

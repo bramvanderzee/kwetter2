@@ -3,8 +3,11 @@ const ROUTES = [
         url: '/api/kweet',
         auth: false,
         proxy: {
-            target: 'https://l3o7lqzt0a.execute-api.eu-west-1.amazonaws.com/kweet',
+            target: 'https://l3o7lqzt0a.execute-api.eu-west-1.amazonaws.com/',
             changeOrigin: true,
+        },
+        pathRewrite: {
+            [`^/api/kweet`]: '/kweet'
         }
     },
     {

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: profile-service
-          image: k3d-bram:5000/profileservice:v0.1
+          image: k3d-bram:5000/profileservice:v0.2
           ports:
           - containerPort: 3000
           env:
