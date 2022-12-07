@@ -5,7 +5,7 @@ metadata:
   labels:
     app: profile-service
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: profile-service
@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
         - name: profile-service
-          image: k3d-bram:5000/profileservice:v0.1
+          image: k3d-bram:5000/profileservice:v0.2
+          imagePullPolicy: Always
           ports:
           - containerPort: 3000
           env:
@@ -46,7 +47,7 @@ metadata:
   name: profile-service
 spec:
   selector:
-    app: api
+    app: profile-service
   ports:
     - protocol: TCP
       port: 3000

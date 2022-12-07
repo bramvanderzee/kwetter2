@@ -9,13 +9,11 @@ const MONGO_PASS = process.env.MONGO_PASS
 
 module.export = MONGO_USER
 
-mongoose.connect(MONGO_URL,
-    {
-        authSource: "admin",
-        user: MONGO_USER,
-        pass: MONGO_PASS,
-        useNewUrlParser: true
-    })
+console.log("Mongo URL:", MONGO_URL)
+
+const connstring = MONGO_URL.replace('<username>', MONGO_USER).replace('<password>', MONGO_PASS)
+
+mongoose.connect(connstring)
         .then(() => {
             const app = createServer()
             app.listen(port, () => {
