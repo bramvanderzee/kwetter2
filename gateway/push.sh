@@ -1,3 +1,3 @@
 #!/bin/bash
-docker build -t bramvanderzee/kwetter-gateway .
-docker push bramvanderzee/kwetter-gateway
+docker build -t kweet.azurecr.io/gateway .
+docker push kweet.azurecr.io/gateway
