@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: profile-service
-          image: bramvanderzee/kwetter-profileservice:latest 
+          image: kweet.azurecr.io/profile:latest
           imagePullPolicy: Always
           ports:
           - containerPort: 3000
