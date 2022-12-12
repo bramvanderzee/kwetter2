@@ -3,10 +3,10 @@ const ROUTES = [
         url: '/api/kweet',
         auth: false,
         proxy: {
-            target: 'https://l3o7lqzt0a.execute-api.eu-west-1.amazonaws.com/',
+            target: 'https://kweetfunctions.azurewebsites.net/api/kweet?code=kweet',
             changeOrigin: true,
             pathRewrite: {
-                [`^/api/kweet`]: '/kweet'
+                [`^/api/kweet`]: ''
             }
         }
     },
