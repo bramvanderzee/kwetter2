@@ -6,4 +6,4 @@ const setupCors = (app, routes) => {
     })
 }
 
-exports.setupProxies = setupProxies
+exports.setupCors = setupCors
