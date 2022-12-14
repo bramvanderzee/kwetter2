@@ -1,5 +1,4 @@
 const express = require('express')
-const cors = require('cors')
 const { setupLogging } = require('./logging')
 const { setupProxies } = require('./proxy')
 const { setupAuth } = require('./auth')
