@@ -27,12 +27,11 @@ const userSchema = new mongoose.Schema({
 const User = new mongoose.model('User', userSchema)
 
 passport.use(new GoogleStrategy({
-    clientID: GOOGLE_CLIENT_ID,
-    clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackUrl: 'http://localhost:3000/auth/google/home'
-},
-    (accessToken, refreshToken, profile, cb) => {
-        User.findOrCreate({ googleId: profile.id}, (err, user) => {
+        clientID: GOOGLE_CLIENT_ID,
+        clientSecret: GOOGLE_CLIENT_SECRET,
+        callbackURL: 'http://localhost:3000/auth/google/home',
+    }, (accessToken, refreshToken, profile, cb) => {
+        () => User.findOrCreate({ googleId: profile.id}, (err, user) => {
             return cb(err, user)
         })
     }
@@ -40,6 +39,16 @@ passport.use(new GoogleStrategy({
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname+'/pages/index.html')
+})
+
+app.get('/auth/google', passport.authenticate('google', {
+    scope: ["profile"]
+}))
+
+app.get('/auth/google/home', passport.authenticate('google', {
+    failureRedirect: '/'
+}), function (req, res) {
+    res.send('You are logged in!')
 })
 
 app.listen(PORT || 3000)
