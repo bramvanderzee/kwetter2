@@ -38,6 +38,7 @@ passport.use(new GoogleStrategy({
 ))
 
 app.get('/', (req, res) => {
+    console.log(req)
     res.sendFile(__dirname+'/pages/index.html')
 })
 
@@ -48,6 +49,7 @@ app.get('/auth/google', passport.authenticate('google', {
 app.get('/auth/google/home', passport.authenticate('google', {
     failureRedirect: '/'
 }), function (req, res) {
+    console.log(req)
     res.send('You are logged in!')
 })
 
