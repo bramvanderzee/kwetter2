@@ -22,6 +22,6 @@ export const options = {
 }
 
 export default function main() {
-  let response = http.get('https://gateway-ingress.f390a337e1f8428780fe.westeurope.aksapp.io/api/kweet')
+  let response = http.get('http://gateway-ingress.f390a337e1f8428780fe.westeurope.aksapp.io/api/kweet')
   sleep(1)
 }
